@@ -1,80 +1,81 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+		<!-- CSRF Token -->
+		<meta content="{{ csrf_token() }}" name="csrf-token">
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+		<title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-</head>
-<body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+		<meta content="" name="description">
+		<meta content="" name="keywords">
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
+		<!-- Favicons -->
+		<link href="assets/img/favicon.png" rel="icon">
+		<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-                    </ul>
+		<!-- Fonts -->
+		<link href="https://fonts.googleapis.com" rel="preconnect">
+		<link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
+		<!-- Scripts -->
+		@vite(['resources/sass/app.scss', 'resources/js/app.js'])
+		@livewireStyles
+		@stack('CSS')
 
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
+		<style>
+			/*CODIGO DEL PELOADER*/
+			
+			#preloader {
+				position: fixed;
+				inset: 0;
+				z-index: 999999;
+				overflow: hidden;
+				background: var(--background-color);
+				transition: all 0.6s ease-out;
+			}
 
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+			#preloader:before {
+				content: "";
+				position: fixed;
+				top: calc(50% - 30px);
+				left: calc(50% - 30px);
+				border: 6px solid #ffffff;
+				border-color: var(--accent-color) transparent var(--accent-color) transparent;
+				border-radius: 50%;
+				width: 60px;
+				height: 60px;
+				animation: animate-preloader 1.5s linear infinite;
+			}
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
+			@keyframes animate-preloader {
+				0% {
+					transform: rotate(0deg);
+				}
 
-        <main class="py-4">
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		@include('layouts.header')
+
+        <main class="main">
+			@yield('breadcrumb')
             @yield('content')
         </main>
-    </div>
-</body>
+
+		@include('layouts.footer')
+
+		@livewireScripts
+		@stack('JS')
+	</body>
+
 </html>

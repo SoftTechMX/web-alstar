@@ -12,7 +12,12 @@ Ejecuta los siguientes comandos para incializar el proyecto en el backend:
 
 ```
 composer install
+```
+
+```
 php artisan storage:link
+php artisan migrate
+php artisan db:seed
 ```
 
 Ejecuta estos comandos para inicializar el FrontEnd:
