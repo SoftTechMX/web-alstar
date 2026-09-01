@@ -6,7 +6,7 @@
 			<h1>Starter Page</h1>
 			<nav class="breadcrumbs">
 				<ol>
-					<li><a href="index.html">Home</a></li>
+					<li><a href="{{ route('index') }}">Home</a></li>
 					<li class="current">Starter Page</li>
 				</ol>
 			</nav>

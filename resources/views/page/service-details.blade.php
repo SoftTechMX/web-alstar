@@ -6,7 +6,7 @@
 			<h1>Service Details</h1>
 			<nav class="breadcrumbs">
 				<ol>
-					<li><a href="index.html">Home</a></li>
+					<li><a href="{{ route('index') }}">Home</a></li>
 					<li class="current">Service Details</li>
 				</ol>
 			</nav>
@@ -26,19 +26,19 @@
 					<div class="service-box">
 						<h4>Serices List</h4>
 						<div class="services-list">
-							<a class="active" href="#"><i class="bi bi-arrow-right-circle"></i><span>Web Design</span></a>
-							<a href="#"><i class="bi bi-arrow-right-circle"></i><span>Web Design</span></a>
-							<a href="#"><i class="bi bi-arrow-right-circle"></i><span>Product Management</span></a>
-							<a href="#"><i class="bi bi-arrow-right-circle"></i><span>Graphic Design</span></a>
-							<a href="#"><i class="bi bi-arrow-right-circle"></i><span>Marketing</span></a>
+							<a class="active" href="javascript:void(0)"><i class="bi bi-arrow-right-circle"></i><span>Web Design</span></a>
+							<a href="javascript:void(0)"><i class="bi bi-arrow-right-circle"></i><span>Web Design</span></a>
+							<a href="javascript:void(0)"><i class="bi bi-arrow-right-circle"></i><span>Product Management</span></a>
+							<a href="javascript:void(0)"><i class="bi bi-arrow-right-circle"></i><span>Graphic Design</span></a>
+							<a href="javascript:void(0)"><i class="bi bi-arrow-right-circle"></i><span>Marketing</span></a>
 						</div>
 					</div><!-- End Services List -->
 
 					<div class="service-box">
 						<h4>Download Catalog</h4>
 						<div class="download-catalog">
-							<a href="#"><i class="bi bi-filetype-pdf"></i><span>Catalog PDF</span></a>
-							<a href="#"><i class="bi bi-file-earmark-word"></i><span>Catalog DOC</span></a>
+							<a href="javascript:void(0)"><i class="bi bi-filetype-pdf"></i><span>Catalog PDF</span></a>
+							<a href="javascript:void(0)"><i class="bi bi-file-earmark-word"></i><span>Catalog DOC</span></a>
 						</div>
 					</div><!-- End Services List -->
 
@@ -46,13 +46,13 @@
 						<i class="bi bi-headset help-icon"></i>
 						<h4>Have a Question?</h4>
 						<p class="d-flex align-items-center mt-2 mb-0"><i class="bi bi-telephone me-2"></i> <span>+1 5589 55488 55</span></p>
-						<p class="d-flex align-items-center mt-1 mb-0"><i class="bi bi-envelope me-2"></i> <a href="mailto:contact@example.com">contact@example.com</a></p>
+						<p class="d-flex align-items-center mt-1 mb-0"><i class="bi bi-envelope me-2"></i> <a href="{{ asset('mailto:contact@example.com') }}">contact@example.com</a></p>
 					</div>
 
 				</div>
 
 				<div class="col-lg-8 ps-lg-5" data-aos-delay="200" data-aos="fade-up">
-					<img alt="" class="img-fluid services-img" src="assets/img/services.jpg">
+					<img alt="" class="img-fluid services-img" src="{{ asset('/storage/services.jpg') }}">
 					<h3>Temporibus et in vero dicta aut eius lidero plastis trand lined voluptas dolorem ut voluptas</h3>
 					<p>
 						Blanditiis voluptate odit ex error ea sed officiis deserunt. Cupiditate non consequatur et doloremque consequuntur. Accusantium labore reprehenderit error temporibus saepe perferendis fuga doloribus vero. Qui omnis quo sit. Dolorem architecto eum et quos deleniti officia qui.

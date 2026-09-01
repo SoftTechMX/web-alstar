@@ -6,7 +6,7 @@
 			<h1>Portfolio Details</h1>
 			<nav class="breadcrumbs">
 				<ol>
-					<li><a href="index.html">Home</a></li>
+					<li><a href="{{ route('index') }}">Home</a></li>
 					<li class="current">Portfolio Details</li>
 				</ol>
 			</nav>
@@ -44,19 +44,19 @@
 						<div class="swiper-wrapper align-items-center">
 
 							<div class="swiper-slide">
-								<img alt="" src="assets/img/portfolio/app-1.jpg">
+								<img alt="" src="{{ asset('/storage/portfolio/app-1.jpg') }}">
 							</div>
 
 							<div class="swiper-slide">
-								<img alt="" src="assets/img/portfolio/product-1.jpg">
+								<img alt="" src="{{ asset('/storage/portfolio/product-1.jpg') }}">
 							</div>
 
 							<div class="swiper-slide">
-								<img alt="" src="assets/img/portfolio/branding-1.jpg">
+								<img alt="" src="{{ asset('/storage/portfolio/branding-1.jpg') }}">
 							</div>
 
 							<div class="swiper-slide">
-								<img alt="" src="assets/img/portfolio/books-1.jpg">
+								<img alt="" src="{{ asset('/storage/portfolio/books-1.jpg') }}">
 							</div>
 
 						</div>
@@ -71,7 +71,7 @@
 							<li><strong>Category</strong>: Web design</li>
 							<li><strong>Client</strong>: ASU Company</li>
 							<li><strong>Project date</strong>: 01 March, 2020</li>
-							<li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+							<li><strong>Project URL</strong>: <a href="javascript:void(0)">www.example.com</a></li>
 						</ul>
 					</div>
 					<div class="portfolio-description" data-aos-delay="300" data-aos="fade-up">
