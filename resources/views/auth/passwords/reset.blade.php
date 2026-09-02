@@ -3,11 +3,11 @@
 @section('breadcrumb')
 	<div class="page-title dark-background">
 		<div class="container">
-			<h1>Starter Page</h1>
+			<h1>Cambiar Contraseña</h1>
 			<nav class="breadcrumbs">
 				<ol>
-					<li><a href="{{ route('index') }}">Home</a></li>
-					<li class="current">Starter Page</li>
+					<li><a href="{{ route('index') }}">Inicio</a></li>
+					<li class="current">Cambiar Contraseña</li>
 				</ol>
 			</nav>
 		</div>
@@ -26,10 +26,7 @@
 		<div class="container" data-aos="fade-up">
 			<div class="row justify-content-center">
 				<div class="col-md-8">
-					<div class="card">
-						<div class="card-header">{{ __('Reset Password') }}</div>
 
-						<div class="card-body">
 							<form action="{{ route('password.update') }}" method="POST">
 								@csrf
 
@@ -79,8 +76,7 @@
 									</div>
 								</div>
 							</form>
-						</div>
-					</div>
+
 				</div>
 			</div>
 		</div>

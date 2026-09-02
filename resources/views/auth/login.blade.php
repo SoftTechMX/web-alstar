@@ -3,11 +3,11 @@
 @section('breadcrumb')
 	<div class="page-title dark-background">
 		<div class="container">
-			<h1>Starter Page</h1>
+			<h1>Inicio de Sesion</h1>
 			<nav class="breadcrumbs">
 				<ol>
-					<li><a href="{{ route('index') }}">Home</a></li>
-					<li class="current">Starter Page</li>
+					<li><a href="{{ route('index') }}">Inicio</a></li>
+					<li class="current">Iniciar Sesion</li>
 				</ol>
 			</nav>
 		</div>
@@ -17,19 +17,17 @@
 @section('content')
 	<section class="starter-section section" id="starter-section">
 
-		<!-- Section Title -->
 		<div class="container section-title" data-aos="fade-up">
-			<h2>Starter Section</h2>
-			<p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-		</div><!-- End Section Title -->
+			{{-- <h2>Iniciar Sesion</h2> --}}
+			<p>
+				{{-- Ingresa tu correo y contraseña para iniciar sesion. --}}
+			</p>
+		</div>
 
 		<div class="container" data-aos="fade-up">
 			<div class="row justify-content-center">
 				<div class="col-md-8">
-					<div class="card">
-						<div class="card-header">{{ __('Login') }}</div>
 
-						<div class="card-body">
 							<form action="{{ route('login') }}" method="POST">
 								@csrf
 
@@ -87,9 +85,6 @@
 									</div>
 								</div>
 							</form>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
 
