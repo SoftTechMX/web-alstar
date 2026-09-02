@@ -78,6 +78,7 @@
 
 		@livewireScripts
 		@stack('JS')
+
 	</body>
 
 </html>

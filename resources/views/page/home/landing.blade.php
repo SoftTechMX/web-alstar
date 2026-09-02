@@ -686,40 +686,8 @@
 					</div>
 
 					<div class="col-lg-7">
-						<form action="forms/contact.php" class="php-email-form" data-aos-delay="200" data-aos="fade-up" method="post">
-							<div class="row gy-4">
-
-								<div class="col-md-6">
-									<label class="pb-2" for="name-field">Your Name</label>
-									<input class="form-control" id="name-field" name="name" required="" type="text">
-								</div>
-
-								<div class="col-md-6">
-									<label class="pb-2" for="email-field">Your Email</label>
-									<input class="form-control" id="email-field" name="email" required="" type="email">
-								</div>
-
-								<div class="col-md-12">
-									<label class="pb-2" for="subject-field">Subject</label>
-									<input class="form-control" id="subject-field" name="subject" required="" type="text">
-								</div>
-
-								<div class="col-md-12">
-									<label class="pb-2" for="message-field">Message</label>
-									<textarea class="form-control" id="message-field" name="message" required="" rows="10"></textarea>
-								</div>
-
-								<div class="col-md-12 text-center">
-									<div class="loading">Loading</div>
-									<div class="error-message"></div>
-									<div class="sent-message">Your message has been sent. Thank you!</div>
-
-									<button type="submit">Send Message</button>
-								</div>
-
-							</div>
-						</form>
-					</div><!-- End Contact Form -->
+						<livewire:form.solicitud-de-contacto />
+					</div>
 
 				</div>
 
