@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Form;
+namespace App\Livewire\Form\SolicitudDeContacto;
 
 use Livewire\Component;
 
@@ -11,7 +11,7 @@ use Exception;
 
 use App\Models\SolicitudDeContacto as PeticionDeContacto;
 
-class SolicitudDeContacto extends Component
+class Create extends Component
 {
     public ?string $nombre;
     public ?string $asunto;
@@ -69,6 +69,6 @@ class SolicitudDeContacto extends Component
 
     public function render()
     {
-        return view('livewire.form.solicitud-de-contacto');
+        return view('livewire.form.solicitud-de-contacto.create');
     }
 }

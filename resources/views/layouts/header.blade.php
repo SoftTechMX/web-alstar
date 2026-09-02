@@ -10,7 +10,7 @@
         <nav id="navmenu" class="navmenu">
             <ul>
                 <li>
-                    <a href="{{ route('landing') }}#hero" class="active">Home</a>
+                    <a href="{{ route('landing') }}#hero" class="active">Inicio</a>
                 </li>
                 <li>
                     <a href="{{ route('landing') }}#about">Acerca de</a>
@@ -30,8 +30,32 @@
                         <span>Cuentas</span> <i class="bi bi-chevron-down toggle-dropdown"></i>
                     </a>
                     <ul>
-                        <li><a href="{{ route('login') }}">Iniciar Sesion</a></li>
-                        <li><a href="{{ route('register') }}">Registro</a></li>
+                        @guest
+                        <li>
+                            <a href="{{ route('login') }}">Iniciar Sesión</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('register') }}">Registro</a>
+                        </li>
+                        @endguest
+
+                        @auth
+                        <li>
+                            <a href="{{ route('logout') }}">Mi Cuenta</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                {{ __('Cerrar Sesión') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </li>
+                        <li>
+                            <a href="{{ route('admin.configuracion') }}">Configuración</a>
+                        </li>
+                        @endauth
                     </ul>
                 </li>
 

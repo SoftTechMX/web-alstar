@@ -641,14 +641,16 @@
 
 		</section><!-- /Team Section -->
 
-		<!-- Contact Section -->
 		<section class="contact section light-background" id="contact">
 
-			<!-- Section Title -->
+			
 			<div class="container section-title" data-aos="fade-up">
-				<h2>Contact</h2>
-				<p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-			</div><!-- End Section Title -->
+				<h2>Contacto</h2>
+				<p>
+					Ponte en contacto con nosotros, llena el siguiente formulario para enviarnos un mensaje a traves de la plataforma, 
+					o contactanos directamente a traves de nuestro correo o mediante nuestro whatsapp.
+				</p>
+			</div>
 
 			<div class="container" data-aos-delay="100" data-aos="fade-up">
 
@@ -686,14 +688,14 @@
 					</div>
 
 					<div class="col-lg-7">
-						<livewire:form.solicitud-de-contacto />
+						<livewire:form.solicitud-de-contacto.create />
 					</div>
 
 				</div>
 
 			</div>
 
-		</section><!-- /Contact Section -->
+		</section>
 	</main>
 @endsection
 

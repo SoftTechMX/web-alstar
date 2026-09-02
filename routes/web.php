@@ -10,6 +10,11 @@ Route::get('/home',                 [App\Http\Controllers\HomeController::class,
 Route::get('/index',                [App\Http\Controllers\HomeController::class, 'landing'])->name('index');
 Route::get('/landing',              [App\Http\Controllers\HomeController::class, 'landing'])->name('landing');
 
+
+Route::prefix('/administracion')->middleware('auth')->group( function(){
+    Route::get('/configuracion',    [App\Http\Controllers\HomeController::class, 'configuracion'])->name('admin.configuracion');
+});
+
 Route::get('/services',             [App\Http\Controllers\HomeController::class, 'services'])->name('services');
 Route::get('/portfolio-details',    [App\Http\Controllers\HomeController::class, 'portfolio'])->name('portfolio-details');
 Route::get('/starter-page',         [App\Http\Controllers\HomeController::class, 'starter_page'])->name('starter-page');

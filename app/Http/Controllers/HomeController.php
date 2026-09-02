@@ -20,4 +20,9 @@ class HomeController extends Controller
     {
         return view('page.home.landing');
     }
+
+    public function configuracion()
+    {
+        return view('page.admin.configuracion');
+    }
 }
