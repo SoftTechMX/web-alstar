@@ -5,10 +5,10 @@ use Illuminate\Support\Facades\Auth;
 
 Auth::routes();
 
-Route::get('/',                     [App\Http\Controllers\HomeController::class, 'index'])->name('root');
-Route::get('/home',                 [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/index',                [App\Http\Controllers\HomeController::class, 'index'])->name('index');
-Route::get('/landing',              [App\Http\Controllers\HomeController::class, 'index'])->name('landing');
+Route::get('/',                     [App\Http\Controllers\HomeController::class, 'landing'])->name('root');
+Route::get('/home',                 [App\Http\Controllers\HomeController::class, 'landing'])->name('home');
+Route::get('/index',                [App\Http\Controllers\HomeController::class, 'landing'])->name('index');
+Route::get('/landing',              [App\Http\Controllers\HomeController::class, 'landing'])->name('landing');
 
 Route::get('/services',             [App\Http\Controllers\HomeController::class, 'services'])->name('services');
 Route::get('/portfolio-details',    [App\Http\Controllers\HomeController::class, 'portfolio'])->name('portfolio-details');
