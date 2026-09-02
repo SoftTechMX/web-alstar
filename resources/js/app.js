@@ -208,5 +208,39 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 	window.addEventListener('load', navmenuScrollspy);
 	document.addEventListener('scroll', navmenuScrollspy);
+});
+
+
+////////////////////////////////////////////////////////////////////////////////
+//                                    ALERTAS TOASTR
+// 
+// Estos listener son para cuando el backend emite alertas, cuando detectan la 
+// alerta se muestran mediante toastr, el detalle de la alerta es enviado 
+// desde el backend, mediante la siguiente sintaxis:
+// 
+// $this->dispatch('alert-warning', 'mensaje');
+//
+////////////////////////////////////////////////////////////////////////////////
+document.addEventListener('DOMContentLoaded', function (){
+
+    window.addEventListener('alert-info', event => {
+        toastr.info(event.detail, 'Atención!');
+    });
+
+    window.addEventListener('alert-warning', event => {
+        toastr.warning(event.detail, 'Advertencia!');
+    });
+
+    window.addEventListener('alert-error', event => {
+        toastr.error(event.detail, 'Error!');
+    });
+
+    window.addEventListener('alert-danger', event => {
+        toastr.error(event.detail, 'Precaución!');
+    });
+
+    window.addEventListener('alert-success', event => {
+        toastr.success(event.detail, 'Correcto!');
+    });
 
 });
